@@ -1,0 +1,22 @@
+export const SET_LOADING = "SET_LOADING";
+export const SET_ERROR = "SET_ERROR";
+// TASKS
+export const GET_TASKS = "GET_TASKS";
+export const CREATE_TASK = "CREATE_TASK";
+export const EDIT_TASK = "EDIT_TASK";
+export const DELETE_TASK = "DELETE_TASK";
+export const DELETE_ALL_TASKS = "DELETE_ALL_TASKS";
+// SORTING
+export const DEFAULT = "DEFAULT";
+export const PRIORITY_HIGHEST = "PRIORITY_HIGHEST";
+export const PRIORITY_LOWEST = "PRIORITY_LOWEST";
+export const DIFFICULTY_HIGHEST = "DIFFICULTY_HIGHEST";
+export const DIFFICULTY_LOWEST = "DIFFICULTY_LOWEST";
+export const DATE_CREATED = "DATE_CREATED";
+export const DUE_DATE_SOONEST = "DUE_DATE_SOONEST";
+export const DUE_DATE_LATEST = "DUE_DATE_LATEST";
+// FILTERS
+export const ALL_TASKS = "ALL_TASKS";
+export const PRIORITY = "PRIORITY";
+export const DIFFICULTY = "DIFFICULTY";
+export const TIME_REMAINING = "TIME_REMAINING";

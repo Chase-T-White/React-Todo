@@ -2,26 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* @layer components {
+} */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  /* bg colors */
+  --dark-brown: #2f0000;
+  --orange: #ef5f10;
+  --burnt-orange: #891000;
+  --brown: #4f1000;
+
+  /* text colors */
+  --text-yellow: #f7f003;
+  --text-gold: #f09b32;
+
+  --text-shadow: #0a0202;
+
+  /* other colors */
+  --select-green: #009904;
+
+  /* text shadows */
+
+  --shadow-lg: 6px 6px 0 var(--text-shadow);
+  --shadow-sm: 2px 2px 0 var(--text-shadow);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-height: 900px;
+  height: 100vh;
+  background-image: linear-gradient(
+    var(--dark-brown) 35%,
+    var(--orange) 60%,
+    var(--burnt-orange),
+    var(--brown)
+  );
+  background-repeat: no-repeat;
+}
+
+h1,
+h2 {
+  font-size: 4.5rem;
+  color: var(--text-yellow);
+  text-shadow: var(--shadow-lg);
+}
+
+article {
+  background-image: url("../public/images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.background-blur {
+  background-color: #ffffff34;
+  backdrop-filter: blur(3px);
+}
+
+.btn {
+  position: relative;
+  color: var(--text-yellow);
+  text-shadow: var(--shadow-sm);
+  background-color: #484d5d;
+  padding: 0.25rem 1.5rem;
+  border: 2px inset #88929f;
+}
+
+.btn:focus-within {
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+  border-style: solid;
+  border-color: var(--select-green);
+  outline: 1px solid var(--select-green);
+}
+
+.disabled:hover,
+.disabled:focus {
+  border: 2px inset #88929f;
+  outline: none;
+}
+
+.disabled:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff56;
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "task": "Sabotage neighbor kid's bike",
+    "priority": "Fatal",
+    "dueBy": "09/15/2023",
+    "difficulty": 8,
+    "createdAt": "09/01/2023"
+  },
+  {
+    "id": 2,
+    "task": "task 2",
+    "priority": "Low",
+    "dueBy": "12/31/2025",
+    "difficulty": 2,
+    "createdAt": "08/23/2023"
+  },
+  {
+    "id": 3,
+    "task": "Prepare",
+    "priority": "High",
+    "dueBy": "10/13/2023",
+    "difficulty": 7,
+    "createdAt": "09/05/2023"
+  },
+  {
+    "id": 4,
+    "task": "task 4",
+    "priority": "Low",
+    "dueBy": "05/09/2024",
+    "difficulty": 3,
+    "createdAt": "07/26/2023"
+  },
+  {
+    "id": 5,
+    "task": "task 5",
+    "priority": "Medium",
+    "dueBy": "12/17/2023",
+    "difficulty": 6,
+    "createdAt": "08/08/2023"
+  }
+]
