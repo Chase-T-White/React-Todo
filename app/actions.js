@@ -1,7 +1,10 @@
-export const SET_LOADING = "SET_LOADING";
-export const SET_ERROR = "SET_ERROR";
+// export const SET_LOADING = "SET_LOADING";
+// export const SET_ERROR = "SET_ERROR";
 // TASKS
+export const LOAD_TASKS = "LOAD_TASKS";
+export const TASKS_ERROR = "TASKS_ERROR";
 export const GET_TASKS = "GET_TASKS";
+export const GET_RANDOM_TASKS = "GET_RANDOM_TASKS";
 export const CREATE_TASK = "CREATE_TASK";
 export const EDIT_TASK = "EDIT_TASK";
 export const DELETE_TASK = "DELETE_TASK";

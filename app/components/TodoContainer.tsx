@@ -1,26 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import { useTasksContext } from "../context/tasks_context";
 import TasksList from "./TasksList";
 import TaskForm from "./TaskForm";
-import fetchRandomTasks from "../functions/fetchRandomTasks";
 
 const TodoContainer = () => {
-  const [tasks, setTasks] = useState([]);
+  const { tasks, fetchRandomTasks, createTask } = useTasksContext();
   const [isCreateTask, setIsCreateTask] = useState(false);
   const [isEditTask, setIsEditTask] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-
   return (
-    <article className="min-h-[700px] h-80vh w-[500px] m-auto">
+    <article className="min-h-[800px] h-80vh w-[600px] m-auto">
       <div className="w-full h-full flex flex-col items-center background-blur">
         <h1 className="mb-8 pt-4">Todo</h1>
         <div className="flex gap-12 mb-8">
           <button
             className={`btn ${tasks.length > 0 ? "disabled" : ""}`}
             disabled={tasks.length > 0 ? true : false}
-            onClick={() => fetchRandomTasks(setTasks, setIsLoading, setIsError)}
+            onClick={fetchRandomTasks}
           >
             Load Random Tasks
           </button>
@@ -32,9 +29,13 @@ const TodoContainer = () => {
             Create Task
           </button>
         </div>
-        <div className="grow">
+        <div className="w-full px-12 grow">
           {isCreateTask || isEditTask ? (
-            <TaskForm tasks={tasks} setTasks={setTasks} />
+            <TaskForm
+              tasks={tasks}
+              createTask={createTask}
+              setIsCreateTask={setIsCreateTask}
+            />
           ) : (
             <TasksList tasks={tasks} />
           )}

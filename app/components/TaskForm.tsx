@@ -1,15 +1,17 @@
-const TaskForm = ({ tasks, setTasks }) => {
+const TaskForm = ({ tasks, createTask, setIsCreateTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target);
     const formData = e.target;
-    setTasks([...tasks], {
-      task: formData[0].value,
-      priority: formData[1].value,
-      difficulty: formData[2].value,
-      dueBy: formData[3].value,
-      createdAt: new Date(),
-    });
+    createTask(formData);
+    setIsCreateTask(false);
+    // createTask([...tasks], {
+    //   task: formData[0].value,
+    //   priority: formData[1].value,
+    //   difficulty: formData[2].value,
+    //   dueBy: formData[3].value,
+    //   createdAt: new Date(),
+    // });
   };
 
   return (

@@ -3,7 +3,7 @@ import Task from "./Task";
 
 const TasksList = ({ tasks }) => {
   return (
-    <ul>
+    <ul className="w-full flex flex-col gap-4">
       {!tasks ? (
         <h4>No Tasks to display</h4>
       ) : (
