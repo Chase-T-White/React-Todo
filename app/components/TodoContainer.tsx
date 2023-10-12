@@ -10,7 +10,7 @@ const TodoContainer = () => {
   const [isCreateTask, setIsCreateTask] = useState(false);
   const [isEditTask, setIsEditTask] = useState(false);
   return (
-    <article className="min-h-[800px] h-80vh w-[600px] m-auto">
+    <article className="min-h-[800px] h-80vh w-[800px] m-auto">
       <div className="w-full h-full flex flex-col items-center background-blur">
         <h1 className="mb-8 pt-4">Todo</h1>
         <div className="flex gap-12 mb-8">
